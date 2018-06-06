@@ -83,6 +83,12 @@ p {
     background:#eeeeee;
 }
 
+/* CONTACT PAGE */
+.contact-section {
+    padding-top:60px;
+    padding-bottom:60px;
+}
+
 /* FOOTER */
 .footer-section {
     background:#222222;
