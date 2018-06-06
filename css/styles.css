@@ -21,15 +21,34 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+h2 {
+    line-height: 40px;
+}
+
 p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+}
+
+.btn {
+    border:none;
+}
+
+.btn-primary {
+    background:#6c547d;
+}
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background:#8a69a2;
 }
 
 .feature-text {
     text-align: center;
 }
 
+.color-text-primary {
+    color:#6c547d;
+}
 /* nav */
 .navbar {
     border-radius:0;
@@ -38,7 +57,20 @@ p {
 }
 
 .navbar-default {
-    background:#ffffff;
+    background:#6c547d;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav > li > a:focus {
+    color:#ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color:#ffffff;
 }
 
 .logo {
@@ -53,11 +85,27 @@ p {
 }
 
 /* jumbotron */
-.jumbotron {
-	background-image: url("../img/hero.jpg");
+.home-jumbotron {
+	background-image: url("../img/hero2.jpg");
 	background-size: cover;
 	background-position: center;
     margin-bottom:0px;
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    min-height: 400px;
+    text-align: center;
+}
+
+.contact-jumbotron {
+    background-image: url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-bottom:0px;
+    display: flex;
+    align-items: center;
+    padding-top:100px;
+    padding-bottom:100px;
 }
 
 .jumbotron h2 {
@@ -83,6 +131,16 @@ p {
     background:#eeeeee;
 }
 
+/* CONTACT PAGE */
+.contact-section {
+    padding-top:60px;
+    padding-bottom:60px;
+}
+
+.contact-list li:nth-child(even) {
+    background:#f3f3f3;
+}
+
 /* FOOTER */
 .footer-section {
     background:#222222;
@@ -99,10 +157,35 @@ p {
     color:#ffffff;
 }
 
+@media only screen and (min-width : 768px) {
+    .navbar-header {
+        padding-top:16px;
+        padding-bottom:16px;
+    }
+
+    .navbar-nav>li>a {
+        padding-top:30px;
+        padding-bottom:30px;
+    }
+}
+
 @media only screen and (min-width : 992px) {
-    .jumbotron {
-        padding-top:120px;
-        padding-bottom:120px;
+    .nav-main-link {
+        display: inline-block;
+        padding-bottom:4px;
+    }
+
+    .nav-main-link:hover {
+        border-bottom:3px solid #ffffff;
+    }
+
+    .nav-main-link.active-link {
+        border-bottom:3px solid #ffffff;
+    }
+
+    .home-jumbotron {
+        min-height: 600px;
+        text-align: left;
     }
 
     .feature-text {
